@@ -5,7 +5,8 @@
 Version Control & Tools: Git, Microsoft Azure DevOps
 
 진행한 프로젝트
-[1. 현천록 (소울라이크 캐주얼 액션 RPG)](현천록 README 링크)
+[1. 현천록 (소울라이크 캐주얼 액션 RPG)]
+https://github.com/chsportfor/CHSportfolio/blob/main/Game_%ED%98%84%EC%B2%9C%EB%A1%9D/%ED%98%84%EC%B2%9C%EB%A1%9D%20%EC%84%A4%EB%AA%85.md
 기간: 2025.09 ~ 2025.12 (팀 프로젝트)
 
 역할: 메인 시스템 구현, UI, 프로젝트 관리 (PM)
