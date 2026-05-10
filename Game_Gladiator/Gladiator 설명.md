@@ -15,7 +15,7 @@
 Conversation2D 플러그인을 활용하여 게임 내 스토리 텔링 및 분기 시스템을 구축했습니다.
 - **스토리 대화 UI 구현:** 플레이어의 몰입도를 높일 수 있는 스토리 스크립트를 구현했습니다
 - **멀티 엔딩 분기 시스템:** 스토리 진행 중 플레이어가 선택하는 선택지에 따라 배드 엔딩과 노말 엔딩으로 분기되고, 노말 엔딩의 경우 추가 전투를 수행하는 맵으로 이동하도록 구현했습니다.
-![Gladiator 멀티엔딩](./BluePrints Image/Gladiator Story.gif)
+![Gladiator 멀티엔딩](./BluePrints_Image/GladiatorStory.gif)
 
 **관련 Blueprints**
 - **AxeNPCBP & EndAxeNPCBP:** NPC와의 상호작용(Interaction) 시 이벤트를 발생시키고, Show Conversation Dialogue 노드를 통해 지정된 대화(Conversation)를 화면에 렌더링합니다. 대화가 진행되는 동안 Block Player Input을 호출하여 플레이어의 다른 조작을 제어하고, 대화 종료 이벤트(OnConversationEnded) 발생 시 Enable Interaction 및 입력 제한을 해제하는 구조로 설계했습니다.
