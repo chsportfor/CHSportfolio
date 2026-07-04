@@ -8,6 +8,7 @@ https://youtu.be/ybD673e60RU?si=EbNsqNGx1z1ZUTTt
 - **개발 인원:** 1인 개발
 - **사용 기술 및 환경:** Unity, OpenXR, XR Interaction Toolkit, Unity MCP
 - **장르:** VR 리듬게임
+- **빌드 파일:** [RotaBeat.apk 다운로드](./BuildAPK/RotaBeat.apk)
 
 ---
 
