@@ -1,12 +1,12 @@
-# VR Rhythm Game - 몰입감 향상 오디오햅틱 리듬게임
+# RotaBeat - VR 오디오-햅틱 리듬게임
 
-**VR 오디오햅틱 리듬게임 시연 영상**
+**RotaBeat 시연 영상**
 https://youtu.be/ybD673e60RU?si=EbNsqNGx1z1ZUTTt
 
 ### 프로젝트 개요
 - **개발 기간:** 2026.03 ~ 2026.06
 - **개발 인원:** 1인 개발
-- **사용 기술 및 환경:** Unity, OpenXR, XR Interaction Toolkit
+- **사용 기술 및 환경:** Unity, OpenXR, XR Interaction Toolkit, Unity MCP
 - **장르:** VR 리듬게임
 
 ---
