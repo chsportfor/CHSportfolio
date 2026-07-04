@@ -78,7 +78,9 @@ $$
 - **PauseUI:** 게임 도중 메뉴 버튼을 누르면 오디오 재생 버퍼를 멈추고 모든 노트와 시각 이펙트를 비활성화하는 일시정지 화면입니다.
 - **ResultUI:** 게임 종료 후 총 점수, 최대 콤보, 정확도 등 플레이 성과를 출력하는 결과 화면입니다.
 
-![결과 화면](./PlayImage/ResultUI.jpg)
+| 플레이 결과 화면 |
+|:---:|
+| <img src="./PlayImage/ResultUI.jpg" width="500"> |
 
 ---
 
@@ -88,7 +90,9 @@ $$
 - **데이터 파이프라인:** 제작 완료된 채보는 CSV 형태로 추출이 가능하며, Unity 에디터 상에서 Import 과정을 통해 
 ScriptableObject로 변환되어 플레이 시 노트 생성 데이터로 활용되도록 하였습니다.
 
-![채보 에디터](./PlayImage/BeatMapEditor.png)
+| 채보 에디터 화면 |
+|:---:|
+| <img src="./PlayImage/BeatMapEditor.png" width="500"> |
 
 ---
 
