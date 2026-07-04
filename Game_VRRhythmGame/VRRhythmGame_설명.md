@@ -15,13 +15,16 @@ https://youtu.be/ybD673e60RU?si=EbNsqNGx1z1ZUTTt
 
 #### 1. 실시간 오디오 DSP 분석 및 Delta+Contrast 햅틱 알고리즘
 FFT를 이용하여 음원을 주파수 대역으로 변환 후, 각 주파수 대역의 Volume 값에 따른 진동 세기 값을 계산하였습니다.
-- **주파수 분석 및 필터링:** Unity의 `GetSpectrumData()`를 활용해 256배열의 스펙트럼 데이터를 획득하고, 저음역대($0\sim688\text{ Hz}$, index 0~7)와 고음역대($1722\sim5166\text{ Hz}$, index 20~60)를 분리하여 가중치를 적용한 평균 진폭 $A_{bass}, A_{treble}$을 연산했습니다.
-- **Delta 값을 이용한 진동값 계산:** 단순 실시간 Volume 값을 진동 세기로 그대로 매핑할 경우, 음악 재생 중 진동이 끊이지 않고 웅웅거리며 비트나 멜로디의 타격감이 체감되지 않는 문제가 있었습니다. 이를 해결하기 위해 이전 프레임 진폭과의 변화량인 $\Delta_{bass}, \Delta_{treble}$을 계산하고, 임계값($\theta$)을 초과할때에만 진동이 작동하도록 설계했습니다.
+- **주파수 분석 및 필터링:** Unity의 `GetSpectrumData()`를 활용해 256배열의 스펙트럼 데이터를 획득하고, 저음역대와 고음역대를 분리하여 가중치를 적용한 평균 진폭 $A_{bass},  A_{treble}$을 연산했습니다.
+- **Delta 값을 이용한 진동값 계산:** 단순 실시간 Volume 값을 진동 세기로 그대로 매핑할 경우, 음악 재생 중 진동이 끊이지 않고 웅웅거리며 비트나 멜로디의 타격감이 체감되지 않는 문제가 있었습니다. 이를 해결하기 위해 이전 프레임 진폭과의 변화량인 $\Delta_{bass},  \Delta_{treble}$을 계산하고, 임계값($\theta$)을 초과할때에만 진동이 작동하도록 설계했습니다.
 - **대비(Contrast) 강조:** 약한 진폭 성분은 더 감소시키고 강한 진폭 성분은 더 증가시키기 위해 대비 상수 $\gamma = 2.5$를 적용하였습니다. 이를 통해 최종 진동 강도에 해당 대비 상수가 제곱되어 적용됩니다.
 
 $$
 V_{bass} = \begin{cases} (A_{bass,t} \cdot \mu_{bass})^\gamma & (\Delta_{bass} > \theta_{bass}) \\ 0 & (\Delta_{bass} \le \theta_{bass}) \end{cases}
 $$
+
+<br>
+
 $$
 V_{treble} = \begin{cases} (A_{treble,t} \cdot \mu_{treble})^\gamma & (\Delta_{treble} > \theta_{treble}) \\ 0 & (\Delta_{treble} \le \theta_{treble}) \end{cases}
 $$
